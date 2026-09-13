@@ -1,0 +1,13 @@
+build/
+*.o
+*.gguf
+.cache/
+
+# Generated build trees and local environment files
+build-*/
+cmake-build-*/
+.env
+.env.*
+*.a
+*.so
+*.bin

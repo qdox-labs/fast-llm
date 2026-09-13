@@ -1,0 +1,11 @@
+if(CMAKE_CUDA_COMPILER)
+  find_package(Threads REQUIRED)
+  find_package(CUDAToolkit REQUIRED)
+  add_executable(fastllm-membench membench.cu)
+  target_include_directories(fastllm-membench PRIVATE ${CMAKE_SOURCE_DIR}/include)
+  target_link_libraries(fastllm-membench PRIVATE fastllm CUDA::cudart Threads::Threads)
+endif()
+
+add_executable(fastllm-decode decode_main.cpp)
+target_link_libraries(fastllm-decode PRIVATE fastllm)
+target_compile_options(fastllm-decode PRIVATE -O2 -Wall -Wextra)
