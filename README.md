@@ -1,4 +1,4 @@
-# Fast-LLM
+# Fast-LLM — Work in progress
 
 Fast-LLM is QDOX's work-in-progress C++17 research runtime for language-model inference. This source snapshot explores CPU/GPU execution, quantized weight access and speculative decoding. Its APIs and supported operations are evolving.
 
